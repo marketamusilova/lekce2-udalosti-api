@@ -9,17 +9,29 @@
 </head>
 <body>
 
-	<h1>Změna tříd, události</h1>
+	<p id="text" onmouseover="changeStyle()" onmouseout="changeStyleBack()">V elipse spí lev</p>
 
-	<div class="ctverecek zluty"></div>
+	<button onclick="changeColour(event)" >Červený po kliknutí</button>
 
-	<div class="ctverecek zeleny"></div>
+	<button onclick="changeSize()">Větší po kliknutí</button>
 
-	<img class="obrazek" src="obrazky/kocka.jpg">
+	<br>
+	<br>
 
-	<button class="tlacitko">Čudlajs</button>
+	<audio id="zvuk" src="audio/dingdingdang.mp3" preload="auto"></audio>
 
-	<audio src="audio/dingdingdang.mp3" preload="auto"></audio>
+	<button onclick="play()">Zapnout</button>
 
+	<button onclick="pause()">Pauza</button>
+
+	<button onclick="quiet()">Ztišit</button>
+
+	<button onclick="normal()">Normální hlasitost</button>
+
+	<button onclick="loud()">Nahlas</button>
+
+	<button onclick="audioBack()">Znovu na začátek</button>
+
+	<script src= "main.js"></script>
 </body>
 </html>
