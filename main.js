@@ -10,24 +10,16 @@ function changeStyleBack() {
     paragraph.style.fontWeight="normal";
     }
 
-
-let click = 0;
+ 
 function changeColour() {
-  if (click==0) {
-  paragraph.classList.add("red")
-  click = 1;
-  }
-  else {
-  paragraph.classList.remove("red")
-  click = 0;
-  }
-
+  paragraph.classList.toggle("red")
 }
 
-// Bohužel se mi nepodařilo vymyslet, jak udělat to, aby se text zvětšil s každým kliknutím. 
-//Zvětší se mi tak bohužel jen jednou o 1px. Koumala jsem nad tím fakt dlouho, ale nic, co by fungovalo jsem nevymyslela. 
-function changeSize() {
-    paragraph.style.fontSize= "17px"
+
+let x=16;
+function changeSize(currentSize) {
+    paragraph.style.fontSize = currentSize + 1 +"px";
+    currentSize= x ++;
 }
 
 let audio;
@@ -41,16 +33,8 @@ function pause() {
     audio.pause()
 }
 
-function quiet() {
-    audio.volume= "0"
-}
-
-function normal() {
-    audio.volume= "0.5"
-}
-
-function loud() {
-    audio.volume= "1"
+function changeVolume(hlasitost) {
+ audio.volume = hlasitost;
 }
 
 function audioBack() {
